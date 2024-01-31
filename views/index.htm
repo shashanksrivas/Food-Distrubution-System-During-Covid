@@ -1,0 +1,1058 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+				<title>Fight Against COVID19</title>   
+				        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+ 				<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen">   
+        <link rel="stylesheet" type="text/css" media="all" href="css/webslidemenu.css" type="text/css" media="screen" />
+		
+		        <link rel="stylesheet" href="css/dark.css" type="text/css" media="screen">   
+
+	<script src="js/handlingevents/sweetalert2.min.js"></script>
+
+		
+	
+		<script src="js/handlingevents/sha256.min.js"></script>
+		<script src="js/handlingevents/web3.min.js"></script>
+        <script src="js/jquery.js"></script>
+		
+				<script src="js/covid19supplier.js"></script>
+				<script src="js/covid19distributor.js"></script>
+				<script type="module" src="js/handlingevents/donatehere.js"></script>
+				
+				<style>
+				
+				.button-success {
+            background: rgb(28, 184, 65); /* this is a green */
+        }
+
+				.asterisk:before{
+				content:"*" ;
+				color:red   
+				}
+				
+				
+				.supplierpage{
+				
+				margin-left: 4px;
+				position: relative;
+
+				}
+				
+				.localfooter{
+				float:left;
+				width:100%;
+				position: relative;
+                margin: 0px 0px 0px 0px;
+				
+				}
+				
+				.homefooter{
+				position: absolute;
+				top: 750px;
+				float: left;
+				margin: 10px 90px 90px 0px;
+				width: 100%;
+
+				
+				}
+				
+				.distributorfooter{
+				position: relative;
+				top: 500px;
+				float: left;
+				margin: 10px 90px 90px 0px;
+				width: 100%;
+				
+				}
+				
+				.tabledistributor{
+				float:left;
+				position: absolute;
+				margin: 400px 0px 60px 130px;
+				width: 80%;
+
+				}
+				
+				.tabledistributordonator {
+				float: left;
+				position: absolute;
+				margin: 670px 0px 60px 130px;
+				width: 80%;
+				}
+				
+				
+				
+				.tabledistributordetails{
+				float:left;
+				position: relative;
+				margin: 50px 90px 60px 150px;
+				width: 80%;
+
+				}
+				
+				.resetbutton1{
+				background: white;
+				padding: 6px;
+				border: 1px solid black;
+				color: black;
+				font-weight: bold;
+				cursor: pointer;
+				text-decoration: none;
+				margin: 10px 0px 30px 400px;
+				position: relative;
+
+				}
+				
+				.resetbutton2{
+				background: white;
+				padding: 6px;
+				border: 1px solid black;
+				color: black;
+				font-weight: bold;
+				cursor: pointer;
+				text-decoration: none;
+				margin: 10px 20px 20px 400px;
+				position: relative;
+				}
+				
+				.donateheresearchbyphonenumberstyle{
+				margin: -21px 50px 50px 50px;
+				position: absolute;
+				top: 100px;
+				left: 500px;
+				color: white;
+				}
+				
+				.donateheresearchbyphonenumberdetailssupplierstyle{
+				margin: -21px 50px 50px 50px;
+				position: absolute;
+				top: 100px;
+				left: 750px;
+				color: white;
+				}
+				
+				.supplierstyle {
+				
+				margin: -21px 50px 50px 50px;
+				position: relative;
+				top: 100px;
+				left: 250px;
+				color:white
+				}
+				
+					.supplierstylepickup {
+				
+       
+				position: relative;
+				top: -105px;
+				left: 750px;
+				color:white
+				}
+
+ 				.logindetails {
+				margin: 50px 50px 50px 50px;
+				position: absolute;
+				top: 70px;
+				left: 550px;
+				color:white
+				}
+				
+				.submitbutton{
+				background: white;
+				padding: 6px;
+				border: 1px solid black;
+				color: black;
+				font-weight: bold;
+				cursor: pointer;
+				text-decoration: none;
+				margin: 10px 20px 20px 620px;
+				position: relative;
+				}
+				</style>
+<script>
+$(document).ready(function () {
+
+var x = document.getElementById("main");
+var z = document.getElementById("distributor");
+var l = document.getElementById("registration");
+var t = document.getElementById("donatehere");
+var p = document.getElementById("pickupandservices");
+
+x.style.display = "block";
+z.style.display = "none";
+l.style.display = "none";
+t.style.display = "none";
+p.style.display = "none";
+
+var q = document.getElementById("donatehereregister");
+	var r = document.getElementById("donateheresearchbyphonenumber");
+  var s = document.getElementById("donateheresearchbyphonenumberdetails");
+	q.style.display = "none";
+	r.style.display = "none";
+  s.style.display = "none";
+  
+
+});
+function donateHere() {
+  var x = document.getElementById("main");
+	var y = document.getElementById("donatehere");
+	var z = document.getElementById("distributor");
+	var l = document.getElementById("registration");
+  var p = document.getElementById("pickupandservices");
+	
+p.style.display = "none";
+	 x.style.display = "none";
+	 y.style.display = "block";
+	z.style.display = "none";
+    l.style.display = "none";
+		
+	var q = document.getElementById("donatehereregister");
+	var r = document.getElementById("donateheresearchbyphonenumber");
+  var s = document.getElementById("donateheresearchbyphonenumberdetails");
+	q.style.display = "block";
+	r.style.display = "block";
+  s.style.display = "none";
+	
+}
+
+function myDistributor() {
+  var x = document.getElementById("main");
+		 var z = document.getElementById("donatehere");
+var l = document.getElementById("registration");
+	 var y = document.getElementById("distributor");
+	 var p = document.getElementById("pickupandservices");
+	 	 var v = document.getElementById("distributorlogin");
+
+	  v.style.display = "block";
+ 
+p.style.display = "none";
+	 x.style.display = "none";
+	 y.style.display = "block";
+	 	z.style.display = "none";
+   l.style.display = "none";
+ 
+}
+
+function myRegistration() {
+  var x = document.getElementById("main");
+	var z = document.getElementById("donatehere");
+  var l = document.getElementById("registration");
+	var y = document.getElementById("distributor");
+var p = document.getElementById("pickupandservices");
+p.style.display = "none";
+	 x.style.display = "none";
+	 y.style.display = "none";
+	 	z.style.display = "none";
+   l.style.display = "block";
+}
+
+
+</script>
+
+<script>
+function myPickupservices() {
+  var x = document.getElementById("main");
+	var z = document.getElementById("donatehere");
+  var l = document.getElementById("registration");
+	var y = document.getElementById("distributor");
+var p = document.getElementById("pickupandservices");
+
+p.style.display = "block";
+	 x.style.display = "none";
+	 y.style.display = "none";
+	 	z.style.display = "none";
+   l.style.display = "none";
+}
+
+</script>
+
+
+        <script>
+				
+    $(document).ready(function () {
+        $(".mob-menu").click(function () {
+            $(".left-pannel .nav").toggleClass("slidemenu");
+        });
+
+        $(".tab_btn").click(function () {
+            var get_tab_id = $(this).attr("data-tab");
+            $("#" + get_tab_id).animate({height: "toggle"}, "fast");
+            $(this).toggleClass('tab_active')
+
+        });
+    });
+
+</script>
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            var w = $(window).width();
+            if (w >= 0 && w <= 780)
+            $(".nav > li > a, .dropdown > li > a").click(function () {
+                $(this).next(".dropdown, .dropdown2").slideToggle("slow");
+            });
+			
+			$('.searchmob').click(function(e) {
+       			 $('#myForm').slideToggle();
+    		});
+			
+        });
+    </script>
+</head>
+<body>
+  <div class="main-container">
+
+            <div class="main-slider">
+
+                <div class="slider-hover" >
+
+                   
+
+                    <div class="left-pannel test">
+
+                     
+                        		<div class="moduletable">
+						
+<ul class="nav">
+<li><a href="" >Home</a></li>
+<li><a onclick="donateHere()">Donate Here</a></li>
+<li><a onclick="myRegistration()">Registration for Distributor</a></li>
+<li><a onclick="myDistributor()">Distributor</a></li>
+<li><a onclick="myPickupservices()">Pickup Services</a></li>
+
+<!-- 
+ <li><a href="index.htm" >
+The Institute <strong class="fa fa-angle-down"></strong></a><ul class="dropdown"><li><a href="/index.php/en-us/the-institute/about-us" >About Us</a></li><li><a href="/index.php/en-us/the-institute/about-iitp-logo" >About IITP Logo</a></li><li><a href="#" >Administration  <strong class="fa fa-angle-down"></strong></a><ul class="dropdown2"><li><a href="/index.php/en-us/the-institute/administration/board-of-governors" >Board of Governors</a></li><li><a href="/index.php/en-us/the-institute/administration/finance-committee" >Finance Committee</a></li><li><a href="/index.php/en-us/the-institute/administration/administrators" >Administrators</a></li><li><a href="/index.php/en-us/the-institute/administration/deans-heads-of-department" >Deans &amp; Heads of Department</a></li><li><a href="/index.php/en-us/the-institute/administration/administrative-units" >Administrative Units</a></li><li><a href="/index.php/en-us/the-institute/administration/acts-and-statutes" >Acts and Statutes</a></li></ul></li><li><a href="/index.php/en-us/the-institute/history-of-patna" >History of Patna</a></li><li><a href="#" >Reports <strong class="fa fa-angle-down"></strong></a><ul class="dropdown2"><li><a href="/index.php/en-us/the-institute/reports/impulse" >Impulse</a></li><li><a href="/index.php/en-us/the-institute/reports/convocation" >Convocation</a></li><li><a href="/index.php/en-us/the-institute/reports/annual-reports" >Annual Reports</a></li></ul></li><li><a href="/index.php/en-us/the-institute/professor-in-charge" >Professor-in-Charge PUBLIC RELATIONS</a></li><li><a href="/index.php/en-us/the-institute/other-institute-functionary" >Other Institute functionary</a></li><li><a href="/index.php/en-us/the-institute/recruitment-rules-and-promotion-policy" >Recruitment Rules and Promotion policy </a></li><li><a href="http://www.iitp.ac.in/alumni/" target="_blank" rel="noopener noreferrer">Alumni &amp; Endowment</a></li><li><a href="/index.php/en-us/the-institute/former-directors" >Former Directors</a></li><li><a href="/index.php/en-us/the-institute/nirf-2017" >NIRF 2017</a></li><li><a href="/index.php/en-us/the-institute/institute-song" >Institute Song</a></li></ul></li>
+<li><a href="index.htm" >
+Services &amp; Amenities <strong class="fa fa-angle-down"></strong></a><ul class="dropdown"><li><a href="https://library.iitp.ac.in/" target="_blank" rel="noopener noreferrer">Central Library</a></li><li><a href="/index.php/en-us/services-amenities/stores-and-purchase" >Stores and Purchase</a><ul class="dropdown2"><li><a href="/index.php/en-us/services-amenities/stores-and-purchase/niqs" >NIQs</a></li><li><a href="/index.php/en-us/services-amenities/stores-and-purchase/tenders" >Tenders</a></li><li><a href="/index.php/en-us/services-amenities/stores-and-purchase/archived-niqs" >Archived NIQs</a></li><li><a href="/index.php/en-us/services-amenities/stores-and-purchase/archived-tenders" >Archived Tenders</a></li></ul></li><li><a href="https://www.iitp.ac.in/sports/" >Sports Cell</a></li><li><a href="/index.php/en-us/services-amenities/hindi-cell" >Hindi Cell</a></li><li><a href="/index.php/en-us/services-amenities/jee-cell" >JEE Cell</a></li><li><a href="/index.php/en-us/services-amenities/guest-houses" >Guest Houses</a></li><li><a href="/index.php/en-us/services-amenities/medical-unit" >Medical Unit</a></li><li><a href="https://iwd.iitp.ac.in/" >Institute Works Department</a></li><li><a href="/index.php/en-us/services-amenities/uba-cell" >UBA Cell</a></li><li><a href="/index.php/en-us/services-amenities/wellness-center" >Wellness Center</a></li><li><a href="#" >Accounts and Audit <strong class="fa fa-angle-down"></strong></a><ul class="dropdown2"><li><a href="/index.php/en-us/services-amenities/accounts-and-audit/vat-certificate" >VAT Certificate</a></li></ul></li><li><a href="https://www.iitp.ac.in/saifiitp/" target="_blank" rel="noopener noreferrer">SAIF</a></li><li><a href="/index.php/en-us/services-amenities/national-knowledge-network" >National Knowledge Network</a><ul class="dropdown2"><li><a href="/index.php/en-us/services-amenities/national-knowledge-network/people" >People</a></li></ul></li></ul></li>
+-->
+<!--
+<li><a href="index.htm" onclick="contact()" >
+Contact</strong></a></li> -->
+</ul>
+
+
+</div>
+
+</div>
+
+		
+<div class="topheader">
+
+                        <ul class="top-form">
+												
+												<ul class="toprpannel">
+
+                           <li><strong>Color</strong>
+
+                                <span class="redcolor">&nbsp;</span>
+
+                                <span class="navibluecolor">&nbsp;</span>
+
+                                <span class="yellowcolor">&nbsp;</span>
+
+                                <span class="defaultcolor">&nbsp;</span>
+
+                            </li>
+
+                            <li><a href="#" onClick="changeFontSize(-2); return false"><img src="images/Aminus.png" alt="#"></a></li>
+                            <li><a href="#" onClick="revertStyles(); return false"> <img src="images/A.png" alt="#"></a> </li>
+                            <li><a href="#" onClick="changeFontSize(2); return false"><img src="images/Aplus.png" alt="#"></a></li>
+
+                          
+												</ul>
+												</ul>
+</div>	
+
+                    <div class="slider-rbox">
+                    	
+                    
+                        <div class="noticeboard">
+                            <h2>Notice Board</h2>
+                            
+
+<div class="custom"  >
+	<div class="container blur">
+<ul class="slider">
+<li><a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic_by_country_and_territory#covid19-container">COVID19 World</a></li>
+<li><a href="https://www.mygov.in/covid-19/">COVID19 India</a></li>
+<li><a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic_by_country_and_territory#covid19-container">COVID19 World</a></li>
+<li><a href="https://www.mygov.in/covid-19/">COVID19 India</a></li>
+<li><a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic_by_country_and_territory#covid19-container">COVID19 World</a></li>
+<li><a href="https://www.mygov.in/covid-19/">COVID19 India</a></li>
+<li><a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic_by_country_and_territory#covid19-container">COVID19 World</a></li>
+<li><a href="https://www.mygov.in/covid-19/">COVID19 India</a></li>
+<li><a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic_by_country_and_territory#covid19-container">COVID19 World</a></li>
+<li><a href="https://www.mygov.in/covid-19/">COVID19 India</a></li>
+<li><a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic_by_country_and_territory#covid19-container">COVID19 World</a></li>
+<li><a href="https://www.mygov.in/covid-19/">COVID19 India</a></li>
+<li><a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic_by_country_and_territory#covid19-container">COVID19 World</a></li>
+<li><a href="https://www.mygov.in/covid-19/">COVID19 India</a></li>
+<li><a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic_by_country_and_territory#covid19-container">COVID19 World</a></li>
+<li><a href="https://www.mygov.in/covid-19/">COVID19 India</a></li>
+<li><a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic_by_country_and_territory#covid19-container">COVID19 World</a></li>
+<li><a href="https://www.mygov.in/covid-19/">COVID19 India</a></li>
+<li><a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic_by_country_and_territory#covid19-container">COVID19 World</a></li>
+<li><a href="https://www.mygov.in/covid-19/">COVID19 India</a></li>
+
+</ul>
+		 </div>
+		 </div> 
+     </div>
+               
+							  </div>
+								
+								<!-- slider hover is over -->	
+</div>
+
+
+
+				<div id="main" role="main">
+                    <div class="slider">
+                        <div class="flexslider">
+                            <!------ Banner ------------>
+                            
+
+<div class="custom"  >
+	<ul class="slides">
+<li><a href="href="#"><img src="images/help1.jpg" alt="#" /></a>
+<h2>The best way to find yourself<strong><br />is to lose yourself<br /> in service of others</strong></h2>
+</li>
+<li><a href="href="#"><img src="images/help2.jpg" alt="#" /></a>
+<h2>No one has ever become<strong><br />poor by giving<br /></strong></h2>
+</li>
+<li><a href="href="#"><img src="images/help3.jpg" alt="#" /></a>
+<h2>We make a living <strong><br />by what we get, but we make a life <br /> by what we give</strong></h2>
+</li>
+<li><a href="href="#"><img src="images/help4.jpg" alt="#" /></a>
+<h2>Help poor <strong><br />and god will help you<br /></strong></h2>
+</li>
+<li><a href="href="#"><img src="images/help5.jpg" alt="#" /></a>
+<h2>Help one another<strong><br />this is what god teach us <br />and we should do it </strong></h2>
+</li>
+<li><a href="href="#"><img src="images/help6.jpg" alt="#" /></a>
+<h2>The poor people need help today,<strong><br />not another day<br /></strong></h2>
+</li>
+</ul></div>
+<br />
+
+
+<!-- end of flexider -->                                     
+               </div>
+			   
+			   
+			   
+						<div class="homefooter">				
+<div class="footer">
+    <!--
+    <div class="mid-container">
+        
+
+<div class="custom"  >
+	<ul>
+<li><a href="/index.php/en-us/9-english/110-rti" hreflang="en"> RTI</a></li>
+<li><a href="/index.php/en-us/">WGRC-ICC </a></li>
+<li><a href="/images/pdf/Annual_Property_Return.pdf">Annual Property Return</a></li>
+<li><a href="/index.php/en-us/9-english/114-anti-ragging" hreflang="en">Anti Ragging</a></li>
+<li><a href="/index.php/en-us/9-english/115-disclaimer" hreflang="en"> Disclaimer</a></li>
+<li><a href="/index.php/en-us/">Sitemap</a></li>
+<li><a href="/index.php/en-us/9-english/139-training-placement-cell" hreflang="en">Training &amp; Placement Cell</a></li> 
+<li><a href="/index.php/en-us/?id=630">Webmail</a></li>
+<li><a href="/index.php/en-us/?id=741">Quick Links</a></li>
+</ul></div>
+            </div>-->
+
+    <div class="copyright">
+        <div class="mid-container">
+            <div class="btm-footer">
+                <p class="fl">Copyright ©  IITP. All rights reserved.</p>
+                <p class="fr">Designed & Developed by <a href="mailto:shashank_1921cs04@iitp.ac.in">IIT Patna</a> </p>
+            </div>
+        </div>
+    </div><!-- copyright -->
+
+</div>
+
+</div>
+
+                    </div>
+
+				
+				</div>
+				
+				
+				
+				
+				<div id="donatehere" role="main" style="display:none">
+				
+				<div id="donatehereregister" role="main" display="none">
+				<div class="supplierstyle">
+				<h1>Donate Here</h1>
+				<br />
+				<br />
+			<label for="fname">Name:</label><br>
+      <input type="text" id="donarname" name="fname" value=""><br>
+			<label for="lname">Phone(10 digit):</label><br>
+      <input type="text" id="donarphone" name="lname" value="094546"><br><br>
+			<label for="lname">Address 1:</label><br>
+      <input type="text" id="donaraddress" name="lname" value=" "><br><br>
+			<label for="lname">Landmark:</label><br>
+			<input type="text" id="donarlandmark" name="lname" value=" "><br><br>
+			<label for="lname">Pin code:</label><br>
+      <input type="text" id="donarpincode" name="lname" value="800567"><br><br>
+			<label for="lname">Email:</label><br>
+      <input type="text" id="donaremail" value=""><br><br>
+			<label for="lname">OTP:</label><br>
+      <input type="text" id="donarotp" value="80970">
+			<input type="submit" class="button-success" id="getOTP" value="get OTP"><br><br>
+			<input type="submit" class="button-success" id="donarsubmit" value="Submit"><br><br>
+			
+	</div>
+	</div>
+	
+	<div id="donateheresearchbyphonenumber" role="main">
+				<div class="donateheresearchbyphonenumberstyle">
+				<h1>Donator details</h1>
+				<br />
+				<br />
+				<label for="lname">Search yourself </label><br><br>
+				<label for="lname">Phone no:<i class="asterisk"></i></label><br><br>
+				<input type="text" id="searchdonarbyphonenumer" name="lname" value="999090304"><br><br>
+				 <!--onclick="showdonateheresearchbyphonenumberdetails()" -->
+				<input type="submit" class="button-success" value="search"  id="donarsearch" ><br><br>
+				<!--onclick="shownewdonator()" -->
+			    <input type="submit" class="button-success" value="New Donator" id="donarnewDonator" >
+			<!--  <h1>Subscribe </h1>
+			<label for="lname">Email:</label><br>
+			<input type="text" id="lname" name="lname" value=" "><br><br>
+			<label for="lname">Phone no:</label><br>
+      <input type="text" id="lname" name="lname" value=" "><br><br>
+			<input type="submit" class="button-success" value="Subscribe"><br><br>
+			-->
+			
+			</div>
+	</div>
+				
+	<div id="donateheresearchbyphonenumberdetails" role="main">
+				<div class="donateheresearchbyphonenumberdetailssupplierstyle">
+				<h1>Make new donation</h1>
+				<br />
+				<br />
+			<label for="lname">Describe about donation:</label><br>
+      <input type="text" id="newdonationdescribe" name="lname" value="Food or cloth"><br><br>
+			<label for="lname">Quantity:</label><br>
+      <input type="text" id="newdonationquantity" name="lname" value="00"><br><br>
+			<label for="lname">Duration for <br>product validity<br> after pickup:</label><br>
+      <input type="text" id="newdonationduration" name="lname" value="00"><br><br>
+			<label for="lname">Date of pickup:</label><br>
+      <input type="date" id="newdonationdate" name="lname" value="2014-02-09"><br><br>
+			<label for="lname">Starting Time for pickup:</label><br>
+      <input type="time" id="newdonationpickup" value="12:00:00"><br><br>
+			<label for="lname">Waiting time(hrs):</label><br>
+      <input type="text" id="newdonationend" value="00"><br><br>
+			<label for="lname">OTP:</label><br>
+      <input type="text" id="newdonationotp" value="00">
+			<input type="submit" class="button-success" value="get OTP"><br><br>
+      <input type="submit" class="button-success" value="Submit" id="newdonationsubmit">
+	</div>
+	</div>
+	<!-- show the status of pickups -->
+	
+	
+	<table border="1" id="tblSample3" class="tabledistributordonator">
+
+<tr>
+
+<th  width="20">Reference Id</th>
+<th  width="20">Describe</th>
+<th  width="10">Quantity</th>
+<th  width="10">Duration</th>
+<th  width="10">Date</th>
+<th  width="20">status by donar</th>
+<th  width="20">status by distributor</th>
+</tr>
+<!--
+<tr>
+<td><input type="text" name="txtRow1" id="txtRow1" size="10" readonly="readonly" /></td>
+<td><input type="text" name="txtRow2" id="txtRow2" size="10" readonly="readonly"/></td>
+<td><input type="text" name="txtRow1" id="txtRow1" size="10" readonly="readonly" /></td>
+<td><input type="text" name="txtRow2" id="txtRow2" size="10" readonly="readonly"/></td>
+<td><input type="text" name="txtRow3" id="txtRow3" size="10" readonly="readonly"/></td>
+<td><input type="text" name="txtRow4" id="txtRow4" size="10" readonly="readonly"/></td>
+<td><input type="text" name="txtRow4" id="txtRow4" size="10" readonly="readonly"/></td>
+
+</tr>
+-->
+</table>
+<br />
+<br />
+<br />
+<br /><br />
+<br />
+<!--
+	<div class="footer">
+
+    
+		<div class="localfooter">	
+     
+    <div class="mid-container">
+        
+
+<div class="custom"  >
+	<ul>
+<li><a href="/index.php/en-us/9-english/110-rti" hreflang="en"> RTI</a></li>
+<li><a href="/index.php/en-us/">WGRC-ICC </a></li>
+<li><a href="/images/pdf/Annual_Property_Return.pdf">Annual Property Return</a></li>
+<li><a href="/index.php/en-us/9-english/114-anti-ragging" hreflang="en">Anti Ragging</a></li>
+<li><a href="/index.php/en-us/9-english/115-disclaimer" hreflang="en"> Disclaimer</a></li>
+<li><a href="/index.php/en-us/">Sitemap</a></li>
+<li><a href="/index.php/en-us/9-english/139-training-placement-cell" hreflang="en">Training &amp; Placement Cell</a></li> 
+<li><a href="/index.php/en-us/?id=630">Webmail</a></li>
+<li><a href="/index.php/en-us/?id=741">Quick Links</a></li>
+</ul></div>
+            </div>
+
+    <div class="copyright">
+        <div class="mid-container">
+            <div class="btm-footer">
+                <p class="fl">Copyright ©  IITP. All rights reserved.</p>
+                <p class="fr">Designed & Developed by <a href="mailto:shashank_1921cs04@iitp.ac.in">IIT Patna</a> </p>
+            </div>
+        </div>
+    </div>
+
+</div></div>-->
+
+				
+				</div>
+				
+								
+
+				
+				
+				
+                <div id="registration" role="main" style="display:none">
+				<div class="supplierstyle">
+				<h1>Registration for Distributor</h1>
+				<select id="distributorregisterperson">
+        <option value="volvo">Self Service</option>
+        <option value="saab">Club</option>
+				<option value="volvo">NGO</option>
+				<option value="volvo">Goverenment Body</option>
+				</select>
+				<br />
+				<br />
+			<label for="fname">Name:</label><br>
+      <input type="text" id="distributorname" name="fname" value=""><br><br>
+			<label for="fname">Username:</label><br>
+      <input type="text" id="distributorusername" name="fname" value=""><br><br>
+			<label for="fname">Password:</label><br>
+      <input type="text" id="distributorpassword" name="fname" value=""><br><br>
+			<label for="lname">Government Id Name:</label><br>
+			<input type="text" id="distributorgovernmentid" name="Id Name" value="Id name"><br><br>
+      <input type="text" id="distributorgovernmentidnumber" name="lname" value="69769"><br><br>
+			<label for="lname">Phone(10 digit):</label><br>
+      <input type="text" id="distributorphone" name="lname" value="5688565"><br><br>
+			<label for="lname">Address:</label><br>
+      <input type="text" id="distributoraddress" name="lname" value=""><br><br>
+			<label for="lname">Pin code:</label><br>
+      <input type="text" id="distributorpincode" name="lname" value="800567"><br><br>
+			<label for="lname">About Your work:</label><br>
+      <input type="text" id="distributoraboutyourwork" name="lname" value=""><br><br>
+			<label for="lname">OTP:</label><br>
+      <input type="text" id="distributorgetotp" name="lname" value="8768">
+			<input type="submit" class="button-success" value="get OTP"><br><br>
+      <input type="submit" class="button-success" value="Submit" id="distributorsubmit">
+	</div>
+	
+<div class="footer">
+
+        <!--
+    <div class="mid-container">
+        
+
+<div class="custom"  >
+	<ul>
+<li><a href="/index.php/en-us/9-english/110-rti" hreflang="en"> RTI</a></li>
+<li><a href="/index.php/en-us/">WGRC-ICC </a></li>
+<li><a href="/images/pdf/Annual_Property_Return.pdf">Annual Property Return</a></li>
+<li><a href="/index.php/en-us/9-english/114-anti-ragging" hreflang="en">Anti Ragging</a></li>
+<li><a href="/index.php/en-us/9-english/115-disclaimer" hreflang="en"> Disclaimer</a></li>
+<li><a href="/index.php/en-us/">Sitemap</a></li>
+<li><a href="/index.php/en-us/9-english/139-training-placement-cell" hreflang="en">Training &amp; Placement Cell</a></li> 
+<li><a href="/index.php/en-us/?id=630">Webmail</a></li>
+<li><a href="/index.php/en-us/?id=741">Quick Links</a></li>
+</ul></div>
+            </div>-->
+
+    <div class="copyright">
+        <div class="mid-container">
+            <div class="btm-footer">
+                <p class="fl">Copyright ©  IITP. All rights reserved.</p>
+                <p class="fr">Designed & Developed by <a href="mailto:shashank_1921cs04@iitp.ac.in">IIT Patna</a> </p>
+            </div>
+        </div>
+    </div><!-- copyright -->
+
+</div>
+
+				
+				</div>
+				
+			    <div id="distributor" role="main" style="display:none">
+				
+				<div class="logindetails" id="distributorlogin" style="display:none">
+				<label for="fname">User ID:</label><br>
+				<input type="text" id="distributorloginuserid" name="fname" value="" ><br>
+				<label for="lname">Password:</label><br>
+				<input type="text" id="distributorloginpassword" name="lname" value="" ><br><br>
+				<input type="submit" class="button-success" value="Login" id="distributorlogin">
+				</div>
+	
+	<!--  -->
+
+<table border="1" id="tblSample1" class="tabledistributor">
+
+<tr>
+
+<th  width="22">Reference Id</th>
+<th  width="22">Describe</th>
+<th  width="10">Quantity</th>
+<th  width="10">Duration</th>
+<th  width="12">Date</th>
+<th  width="22">status by donar</th>
+<th  width="22">status by distributor</th>
+<th  width="8">Accept</th>
+<th  width="8">Reject</th>
+<th  width="14">schedule later</th>
+</tr>
+
+<!--
+<tr>
+
+<td><input type="text" name="txtRow1" id="txtRow1" size="10" readonly="readonly" /></td>
+<td><input type="text" name="txtRow2" id="txtRow2" size="10" readonly="readonly"/></td>
+<td><input type="text" name="txtRow3" id="txtRow3" size="10" readonly="readonly"/></td>
+<td><input type="text" name="txtRow4" id="txtRow4" size="10" readonly="readonly"/></td>
+<td><input type="text" name="txtRow4" id="txtRow4" size="10" readonly="readonly"/></td>
+<td><input type="text" name="txtRow4" id="txtRow4" size="10" readonly="readonly"/></td>
+<td><input type="submit" class="button-success" value="schedule later" /></td>
+
+</tr>
+-->
+
+</table>
+
+
+<!--
+<button onclick="addRowToTable()" class="resetbutton1"> add</button>
+<button onclick="removeRowFromTable()" class="resetbutton2"> remove</button>
+<br />
+<button  class="submitbutton"> submit</button>
+	
+	-->
+	 <!--
+	<div class="distributorfooter">
+	<div class="footer">
+
+      
+    <div class="mid-container">
+        
+
+<div class="custom"  >
+	<ul>
+<li><a href="/index.php/en-us/9-english/110-rti" hreflang="en"> RTI</a></li>
+<li><a href="/index.php/en-us/">WGRC-ICC </a></li>
+<li><a href="/images/pdf/Annual_Property_Return.pdf">Annual Property Return</a></li>
+<li><a href="/index.php/en-us/9-english/114-anti-ragging" hreflang="en">Anti Ragging</a></li>
+<li><a href="/index.php/en-us/9-english/115-disclaimer" hreflang="en"> Disclaimer</a></li>
+<li><a href="/index.php/en-us/">Sitemap</a></li>
+<li><a href="/index.php/en-us/9-english/139-training-placement-cell" hreflang="en">Training &amp; Placement Cell</a></li> 
+<li><a href="/index.php/en-us/?id=630">Webmail</a></li>
+<li><a href="/index.php/en-us/?id=741">Quick Links</a></li>
+</ul></div>
+            </div>
+			
+			</div>
+
+    <div class="copyright">
+        <div class="mid-container">
+            <div class="btm-footer">
+                <p class="fl">Copyright ©  IITP. All rights reserved.</p>
+                <p class="fr">Designed & Developed by <a href="mailto:shashank_1921cs04@iitp.ac.in">IIT Patna</a> </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>-->
+
+</div>
+				
+				
+		<div id="pickupandservices" role="main" style="display:none">
+				<div class="supplierstyle">
+				<h1>Pickup services</h1>
+				<br />
+				<br />
+				<h1>Donator confirmation</h1>
+				<br />
+			<label for="fname">Reference id:</label><br>
+      <input type="text" id="pickupservicedonatorreferenceid" name="fname" value="0000"><br><br>
+      
+
+      <input type="submit" class="button-success" value="Submit" id="pickupservicedonatorsubmit">
+	</div>
+	
+			<div class="supplierstylepickup">
+				
+				
+				<h1>Distributor confirmation</h1>
+				<br />
+			
+			<label for="fname">Reference id:</label><br>
+      <input type="text" id="pickupservicedistributorreferenceid" name="fname" value="0000"><br><br>
+	  <label for="fname">Distributor id:</label><br>
+      <input type="text" id="pickupservicedistributorid" name="fname" value="000"><br><br>
+
+      <input type="submit" class="button-success" value="Submit" id="pickupservicedistributorsubmit">
+	</div>
+	
+	
+		<div class="localfooter">			
+	<div class="footer">
+
+    <!--
+    <div class="mid-container">
+        
+
+<div class="custom"  >
+	<ul>
+<li><a href="/index.php/en-us/9-english/110-rti" hreflang="en"> RTI</a></li>
+<li><a href="/index.php/en-us/">WGRC-ICC </a></li>
+<li><a href="/images/pdf/Annual_Property_Return.pdf">Annual Property Return</a></li>
+<li><a href="/index.php/en-us/9-english/114-anti-ragging" hreflang="en">Anti Ragging</a></li>
+<li><a href="/index.php/en-us/9-english/115-disclaimer" hreflang="en"> Disclaimer</a></li>
+<li><a href="/index.php/en-us/">Sitemap</a></li>
+<li><a href="/index.php/en-us/9-english/139-training-placement-cell" hreflang="en">Training &amp; Placement Cell</a></li> 
+<li><a href="/index.php/en-us/?id=630">Webmail</a></li>
+<li><a href="/index.php/en-us/?id=741">Quick Links</a></li>
+</ul></div>
+            </div>-->
+
+    <div class="copyright">
+        <div class="mid-container">
+            <div class="btm-footer">
+                <p class="fl">Copyright ©  IITP. All rights reserved.</p>
+                <p class="fr">Designed & Developed by <a href="mailto:shashank_1921cs04@iitp.ac.in">IIT Patna</a> </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+	</div>		
+				
+				
+				</div>
+				</div>										
+			
+													
+  <script>
+            $(document).ready(function () {
+                                      
+                                      //covid 19 
+                                      
+  $('<span class="covid-19"><a href="https://www.iitp.ac.in/index.php/en-us/?layout=edit&id=887" style="color:red; text-decoration:none; font-weight:bold;">Director Message on COVID-19</a><img src="/images/photo/new.gif" draggable="false"></span>').insertAfter(".test123 .custom");
+                                      
+                $('.redcolor').on('click', function (e) {
+                    // alert('aaa');
+                    $('body').removeClass();
+                    $('body').addClass('redtheme');
+                    e.stopPropagation();
+                });
+
+                $('.navibluecolor').on('click', function (e) {
+                    $('body').removeClass();
+                    $('body').addClass('navybluetheme');
+                    e.stopPropagation();
+                });
+
+                $('.yellowcolor').on('click', function (e) {
+                    $('body').removeClass();
+                    $('body').addClass('yellowtheme');
+                    e.stopPropagation();
+                });
+
+                $('.defaultcolor').on('click', function (e) {
+                    $('body').removeClass();
+                    $('body').addClass('defaulttheme');
+                    e.stopPropagation();
+                });
+
+            });
+        </script>
+        <script defer src="js/jquery.flexslider.js"></script>
+
+        <script type="text/javascript">
+            $(function () {
+                //SyntaxHighlighter.all();
+
+            });
+
+            $(window).load(function () {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    start: function (slider) {
+                        //                $('body').removeClass('loading');
+
+                    }
+                });
+            });
+
+        </script>
+				
+
+
+
+
+
+<script>
+    $(document).ready(function() {
+		
+		
+		
+		
+		
+		
+	var showChar = 50;
+	var ellipsestext = "...";
+	var moretext = "more";
+	var lesstext = "less";
+	$('.more').each(function() {
+		var content = $(this).html();
+
+		if(content.length > showChar) {
+
+			var c = content.substr(0, showChar);
+			var h = content.substr(showChar-1, content.length - showChar);
+
+			var html = c + '<span class="moreelipses">'+ellipsestext;
+
+			$(this).html(html);
+		}
+
+	});
+	
+	
+	
+	
+	
+	
+
+	$(".morelink").click(function(){
+		if($(this).hasClass("less")) {
+			$(this).removeClass("less");
+			$(this).html(moretext);
+		} else {
+			$(this).addClass("less");
+			$(this).html(lesstext);
+		}
+		$(this).parent().prev().toggle();
+		$(this).prev().toggle();
+		return false;
+	});
+});
+    </script>
+<script type="text/javascript" src="js/webslidemenu.js"></script>
+<script src="js/jquery.marquee.js" type="text/javascript"></script>
+<script src="js/md_stylechanger.js" type="text/javascript"></script>
+<script>
+
+    $(function () {
+        var $mwo = $('.marquee-with-options');
+        $('.marquee').marquee();
+        $('.noticeboard ul').marquee({
+            //speed in milliseconds of the marquee
+
+            speed: 8000,
+            //gap in pixels between the tickers
+            gap: 10,
+            //gap in pixels between the tickers
+            delayBeforeStart: 0,
+            //'left' or 'right'
+            direction: 'up',
+            //true or false - should the marquee be duplicated to show an effect of continues flow
+            duplicated: true,
+            //on hover pause the marquee - using jQuery plugin https://github.com/tobia/Pause
+            pauseOnHover: true
+        });
+
+    });
+
+</script>
+
+
+
+<script>
+    jQuery(function () {
+        var newFontSize = localStorage["FontSize"];
+
+        var resize = new Array('a', 'p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', '.left-pannel ul li a', '.dropdown li a', 'ul', 'span', 'strong', '.resizable');
+        resize = resize.join(',');
+
+
+        //resets the font size when "reset" is clicked
+        var resetFont = jQuery(resize).css('font-size');
+        jQuery(".reset").click(function () {
+            jQuery(resize).css('font-size', resetFont);
+        });
+
+        //increases font size when "+" is clicked
+        jQuery(".increase").click(function () {
+            alert('increase');
+            var originalFontSize = jQuery(resize).css('font-size');
+            var originalFontNumber = parseFloat(originalFontSize, 10);
+            var newFontSize = originalFontNumber * 1.2;
+            //alert(newFontSize);
+
+            if (newFontSize <= 23.04) {
+                jQuery(resize).css('font-size', newFontSize);
+                localStorage.setItem('FontSize', newFontSize);
+                return false;
+            }
+        });
+        jQuery(".decrease").click(function () {
+            //alert('decrease');
+            var originalFontSize = jQuery(resize).css('font-size');
+            var originalFontNumber = parseFloat(originalFontSize, 10);
+            var newFontSize = originalFontNumber * 0.8;
+            //alert(newFontSize);
+            if (newFontSize >= 10) {
+                jQuery(resize).css('font-size', newFontSize);
+                localStorage.setItem('FontSize', newFontSize);
+                return false;
+            }
+        });
+
+    });
+</script>
+
+  <script src="js/glightbox.min.js" type="text/javascript"></script>
+  <script src="js/custom.js" type="text/javascript"></script>
+
+
+  <script>
+    var lightbox = GLightbox();
+  </script>
+</body>
+</html>
